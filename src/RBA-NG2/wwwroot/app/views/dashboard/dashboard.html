@@ -1,0 +1,29 @@
+﻿<section class="container">
+    <div class="jumbotron">
+        <h2>Welcome to your dashboard!</h2>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <div class="row">
+                <div *ngFor="let account of userAccounts" class="col-xs-12 col-sm-6" style="border: 1px solid lightgray">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            Account No: {{account.accountNbr}}
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            Account Name: {{account.accountName}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            Available Bal: {{account.availableBal | currency:"AUD":2}}
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            Account Bal: {{account.accountBal | currency:"AUD":2}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
